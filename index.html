@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first writeup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bug Writeups</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>hello</h1>
+  <header class="site-header">
+    <div class="brand">bug.writeups</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#writeups">Writeups</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Peronsal Notebook</h1>
+      <p class="tagline">My Personal notes on vulnerabilities,bugs and life lessons learned.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        This site is where I document my bug bounty findings. I also like writing about things that happens in my life and the lessons that I learn from those experiences, kind of like a personal notebook. I hope you will learn something new.
+      </p>
+    </section>
+
+    <section id="writeups">
+      <h2>Latest Writeups</h2>
+      <div class="cards">
+        <article class="card">
+          <h3><a href="#">CSP Relaxation → CSRF Chain</a></h3>
+          <p class="meta">Aug 2025</p>
+          <p class="excerpt">
+            Chaining a relaxed <code>document.domain</code> with a GET sink to achieve CSRF.
+          </p>
+        </article>
+        <article class="card">
+          <h3><a href="#">Client-side Path Traversal Disclosure</a></h3>
+          <p class="meta">Jul 2025</p>
+          <p class="excerpt">
+            A subtle path join in frontend code led to exposure of internal templates.
+          </p>
+        </article>
+        <article class="card">
+          <h3><a href="#">Open Redirect in OAuth Flow</a></h3>
+          <p class="meta">Jul 2025</p>
+          <p class="excerpt">
+            A fallback route allowed redirect hijacking in rare login scenarios.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Reach out to me via <a href="mailto:gracewalker@wearehackerone.com">email</a> or find me on
+        <a href="https://x.com/yunxohang">twitter</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Yunxohang Limbu</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
