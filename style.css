@@ -1,0 +1,120 @@
+/* Base Theme */
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #ddd;
+  font-family: monospace;
+  line-height: 1.7;         /* slightly more breathing space */
+  font-size: 17px;          /* increased from browser default (~16px) */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;       /* slightly more padding */
+  border-bottom: 1px solid #222;
+  background: #0d0d0d;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  font-weight: bold;
+  color: #eee;
+  font-size: 1.3em;         /* larger brand text */
+}
+
+.site-header nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1.05em;
+}
+.site-header nav a:hover {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h1 {
+  font-size: 3.3em;         /* bigger headline */
+  margin: 0;
+}
+.tagline {
+  color: #888;
+  margin-top: 12px;
+  font-size: 1.2em;
+}
+
+/* Sections */
+section {
+  margin: 40px 0;
+}
+h2 {
+  border-bottom: 1px solid #222;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+  color: #ccc;
+  font-size: 1.6em;         /* slightly bigger sub-headings */
+}
+p {
+  color: #bbb;
+  font-size: 1.05em;
+}
+
+/* Cards for writeups */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 18px;
+  transition: background 0.2s;
+}
+.card:hover {
+  background: #151515;
+}
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1.25em;
+}
+.card h3 a {
+  color: #ddd;
+  text-decoration: none;
+}
+.card h3 a:hover {
+  text-decoration: underline;
+}
+.meta {
+  font-size: 0.9em;
+  color: #777;
+}
+.excerpt {
+  color: #aaa;
+  margin-top: 8px;
+  font-size: 1.05em;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 22px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 0.95em;
+}
